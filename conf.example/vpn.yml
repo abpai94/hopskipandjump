@@ -1,0 +1,20 @@
+http:
+  routers:
+    vpn:
+      entryPoints:
+        - https
+      service: vpn
+      rule: Host(`$FQDN`)
+      middlewares:
+        - authelia-auth
+      tls:
+        certResolver: cloudflare
+        domains:
+          - main: $DOMAIN
+            sans:
+              - "*.$DOMAIN"
+  services:
+    vpn:
+      loadBalancer:
+        servers:
+          - url: "http://$IP_ADDRESS_VPS"

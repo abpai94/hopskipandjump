@@ -1,0 +1,25 @@
+services:
+  hopskipandjump:
+    container_name: hopskipandjump
+    image: ghcr.io/hopskipandjumphopskipandjump
+    environment:
+      # Required
+      - DOMAIN=example.co.uk
+      - EMAIL_ADDRESS=admin@example.co.uk
+      - LINODE_CLI_TOKEN=test_api_token
+      - LINODE_AUTHORISED_USER=admin
+      - LINODE_VPS_PASSWORD=test_vps_password
+      - CLOUDFLARE_ZONE_ID=test_zone_id
+      - CLOUDFLARE_GLOBAL_API_KEY=test_global_api_key
+      - PUSH_NOTIFICATION_URL=https://push.example.co.uk
+      - PUSH_NOTIFICATION_TOKEN=push_notification_api_token
+      # Option 1: Self hosted
+      #- IP_ADDRESS_SERVER=192.168,1.1
+      #- REVERSE_PROXY_SOURCE=/app/conf.example/vpn.yml
+      #- REVERSE_PROXY_DESTINATION=/app/proxy/
+      # Option 2: Full deployment
+      #- CLOUDFLARE_CERTBOT_API_TOKEN=test_cloudflare_certbot_api_token
+      #- WIREGUARD_PASSWORD=test_wireguard_password
+    volumes:
+      - /path/to/hopskipandjump/data:/app/data
+      - /path/to/reverse/proxy:/app/proxy
