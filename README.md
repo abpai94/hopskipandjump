@@ -50,8 +50,8 @@ Being a self hoster myself it felt a bit execessive to deploy a VPN remotely and
 | `PUSH_NOTIFICATION_URL`        | Gotify push notification URL                                                                   |                       |                       | [x]                   |
 | `PUSH_NOTIFICATION_TOKEN`      | Gotify push notification token key                                                             |                       |                       | [x]                   |
 | `IP_ADDRESS_SERVER`            | External IP address of your self hosting server                                                |                       | [x]                   |                       |
-| `REVERSE_PROXY_SOURCE`         | Reverse proxy source configuration file                                                        |                       | [x]                   |                       |
-| `REVERSE_PROXY_DESTINATION`    | Reverse proxy destination folder                                                               |                       | [x]                   |                       |
+| `REVERSE_PROXY_SOURCE`         | Reverse proxy source configuration filename                                                    |                       | [x]                   |                       |
+| `REVERSE_PROXY_DESTINATION`    | Reverse proxy destination configuration filename                                               |                       | [x]                   |                       |
 | `CLOUDFLARE_CERTBOT_API_TOKEN` | Cloudflare API key with privileges to create certificates                                      | [x]                   |                       |                       |
 | `WIREGUARD_PASSWORD`           | Password for the wireguard web interface                                                       | [x]                   |                       |                       |
 
